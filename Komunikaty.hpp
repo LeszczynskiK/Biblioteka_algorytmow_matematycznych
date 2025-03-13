@@ -11,6 +11,7 @@ using namespace std;
 
 void welcomeText();//welcome text (begining of program working)
 void delayProgram();//delay any code 
+void longDelay(int i);//longer delay(delayprogram ran in loop)
 
 class AlgorithmManager
 {

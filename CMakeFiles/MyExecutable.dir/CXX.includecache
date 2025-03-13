@@ -12,10 +12,6 @@ iostream
 thread
 -
 
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.cpp
-Komunikaty.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.hpp
-
 /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.hpp
 iostream
 -
@@ -46,6 +42,8 @@ thread
 iostream
 -
 thread
+-
+memory
 -
 CiagFibonacciego.hpp
 /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CiagFibonacciego.hpp

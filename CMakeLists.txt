@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.13) #min working version of cmake
 project(CMakeConf CXX)#CMakeConf can be the same as folder name but dont have to be
 
 #set standard of c++ and c
-set(CMAKE_CXX_STANDARD 11)#c++ version
+set(CMAKE_CXX_STANDARD 14)#c++ version
 set(CMAKE_C_STANDARD 99)#c version
 
 #Sources

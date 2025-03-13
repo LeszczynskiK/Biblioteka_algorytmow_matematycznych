@@ -12,6 +12,14 @@ void delayProgram()
     }
 }
 
+void longDelay(int i)//longer delay...
+{
+    for(int k=0;k<i;k++)
+    {
+        delayProgram();
+    }
+}
+
 void welcomeText()
 {
     cout<<"Witaj w programie skupiajacych w sobie wiele algorytmow matematycznych!"<<endl;
