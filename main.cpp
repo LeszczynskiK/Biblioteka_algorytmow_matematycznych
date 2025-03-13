@@ -12,7 +12,11 @@ using namespace std;
 
 int main()
 {
-    cout<<"Hello world!"<<endl;
+    cout<<"--------------------------------------------------------------------------"<<endl;
+
+    delayProgram();//wait before showing welcome text...
+    welcomeText();//display welcome text...
+
 
     return 0;
 }

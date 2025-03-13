@@ -7,6 +7,7 @@
 #include <thread>
 using namespace std;
 
-
+void welcomeText();
+void delayProgram();
 
 #endif // KOMUNIKATY_HPP
