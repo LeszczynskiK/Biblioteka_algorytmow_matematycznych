@@ -6,6 +6,7 @@ CMakeFiles/MyExecutable.dir/CiagFibonacciego.cpp.o: CiagFibonacciego.hpp
 
 CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o: Komunikaty.cpp
 CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o: Komunikaty.hpp
+CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o: Silnia.hpp
 
 CMakeFiles/MyExecutable.dir/MonteCarlo.cpp.o: MonteCarlo.cpp
 CMakeFiles/MyExecutable.dir/MonteCarlo.cpp.o: MonteCarlo.hpp

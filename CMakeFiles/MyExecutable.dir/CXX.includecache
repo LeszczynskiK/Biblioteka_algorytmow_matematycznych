@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CiagFibonacciego.cpp
-CiagFibonacciego.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CiagFibonacciego.hpp
-
 /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CiagFibonacciego.hpp
 iostream
 -
@@ -25,30 +21,20 @@ iostream
 -
 thread
 -
-
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.cpp
-MonteCarlo.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.hpp
-
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.hpp
-iostream
--
-thread
--
-
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.cpp
 Silnia.hpp
 /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.hpp
 
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.hpp
 iostream
 -
 thread
 -
 
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.cpp
-SitoEratostenesa.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.hpp
+iostream
+-
+thread
+-
 
 /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.hpp
 iostream
