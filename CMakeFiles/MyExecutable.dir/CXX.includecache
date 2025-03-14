@@ -23,6 +23,8 @@ iostream
 -
 thread
 -
+mutex
+-
 memory
 -
 string
@@ -57,22 +59,4 @@ vector
 -
 thread
 -
-
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/main.cpp
-iostream
--
-thread
--
-memory
--
-CiagFibonacciego.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CiagFibonacciego.hpp
-MonteCarlo.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.hpp
-Silnia.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.hpp
-SitoEratostenesa.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.hpp
-Komunikaty.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.hpp
 

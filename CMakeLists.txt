@@ -29,3 +29,6 @@ set(HEADERS
 #Make executable file
 add_executable(MyExecutable ${SOURCES} ${HEADERS})#file made based of sources and headers
 #executable file is name MyExecutable, to to run program type ./MyExecutable
+
+# Link pthread
+target_link_libraries(MyExecutable pthread)

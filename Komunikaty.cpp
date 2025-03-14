@@ -2,9 +2,9 @@
 
 void delayProgram()
 {
-    for (int i = 0; i < 12500; i++) // iterate loop
+    for (int i = 0; i < 999; i++) // iterate loop
     {
-        for (int j = 0; j < 9999; j++)
+        for (int j = 0; j < 999; j++)
         {
             // it will iterate and make delay...
             // this function is made to make "stops" between something
@@ -32,10 +32,17 @@ void welcomeText()
 
 AlgorithmManager::AlgorithmManager() // constructor...
 {
+
 }
 
 AlgorithmManager::~AlgorithmManager() // destructor...
 {
+    for (auto& t : threads) {//reference to threads object(from vector)
+        if (t.joinable())//if there is any thread which is active(still joinable)
+        { 
+            t.join();//wait for this thread(so join him first, and then close program...)
+        }
+    }
 }
 
 void AlgorithmManager::runProgram()
@@ -44,9 +51,9 @@ void AlgorithmManager::runProgram()
 
     // create class objects(empty so far, filled in funciton later) - becouse i want to have them not only in case but need them more locally...
     // if created in case, it woult only work in case
-    unique_ptr<Silnia> s1;         //empty pointers so far
-    unique_ptr<SitoEratostenesa> t1; 
-    unique_ptr<CiagFibonacciego> f1; 
+    unique_ptr<Silnia> s1; // empty pointers so far
+    unique_ptr<SitoEratostenesa> t1;
+    unique_ptr<CiagFibonacciego> f1;
     unique_ptr<MonteCarlo> m1;
 
     delayProgram();
@@ -58,6 +65,11 @@ void AlgorithmManager::runProgram()
     delayProgram();
     cout << "4. SitoEratostenesa - wypisywanie liczb pierwszych" << endl;
     delayProgram();
+    cout << "5. Wyswietl wszystkie wyniki..." << endl;
+    delayProgram();
+    cout << "0. Zakoncz program!" << endl;
+    delayProgram();
+
     cout << "Wybierz wpisujac odpowiedni numer:" << endl;
     delayProgram();
     cout << "Numer: ";
@@ -66,50 +78,63 @@ void AlgorithmManager::runProgram()
 
     switch (val) // choose option
     {
+    case 0:
+    {
+        // clear vectors with scores
+        silniaResults.clear();
+        eratosResults.clear();
+        monteResults.clear();
+        figResults.clear();
+
+        exit(0);
+        break;
+    }
     case 1:
+    {
         system("clear");
-        int numb;//amount of numbers to get
+        int numb; // amount of numbers to get
         cout << "Wybrano: ciag fibonacciego!!!" << endl;
         delayProgram();
 
-        cout<<"Ile liczb z ciagu chcesz otrzymac: "<<endl;
+        cout << "Ile liczb z ciagu chcesz otrzymac: " << endl;
         delayProgram();
-        cout<<"n= ";
-        cin>>numb;
+        cout << "n= ";
+        cin >> numb;
 
-        f1 = make_unique<CiagFibonacciego>(numb);//create object
-        f1->generateFib();//generate numbers (n numbers)
-        delayProgram();
-
-        cout<<"Oto szukany ciag fibonacciego: "<<endl;
-        delayProgram();
-        f1->displayFib();
-
-
+        thread t([this, numb]()
+                 {
+                     auto f1 = make_unique<CiagFibonacciego>(numb); // create object
+                     f1->generateFib();                             // generate numbers (n numbers)
+                     lock_guard<mutex> lock(mtx);                   // shared sources are save(threads management)
+                     figResults.push_back(move(f1));                // push t to vector
+                 });
+        threads.push_back(move(t)); // calculations are in backgroun now... object is in thread vector type..
         break;
-
+    }
     case 2:
+    {
         int amount_of_trials;
         system("clear");
         cout << "Wybrano:  monte carlo!!!" << endl;
         delayProgram();
 
-        cout<<"Ile prob ma miec eksperyment: "<<endl;
+        cout << "Ile prob ma miec eksperyment: " << endl;
         delayProgram();
 
-        cout<<"Ilosc prob: ";
-        cin>>amount_of_trials;
+        cout << "Ilosc prob: ";
+        cin >> amount_of_trials;
 
         delayProgram();
-        m1 = make_unique<MonteCarlo>(amount_of_trials);//create object
-        m1->runSimulation();//call simulation method
+        m1 = make_unique<MonteCarlo>(amount_of_trials); // create object
+        m1->runSimulation();                            // call simulation method
 
-        cout<<"Po "<<amount_of_trials<<" probach, estymacja Pi = ";
-        m1->displayResult();//show estimated PI
+        cout << "Po " << amount_of_trials << " probach, estymacja Pi = ";
+        m1->displayResult(); // show estimated PI
 
         break;
-
+    }
     case 3:
+    {
         int n;
         system("clear");
         cout << "Wybrano:  silnia" << endl;
@@ -120,11 +145,12 @@ void AlgorithmManager::runProgram()
         cout << "n= ";
         cin >> n;
 
-        s1 = make_unique<Silnia>();//make object
+        s1 = make_unique<Silnia>(); // make object
         cout << "Dla n=" << n << " silnia wynosi: " << s1->countN(n) << endl;
         break;
-
+    }
     case 4:
+    {
         int temp; // put limit value here
         system("clear");
         cout << "Wybrano:  sito eratostenesa" << endl;
@@ -136,15 +162,47 @@ void AlgorithmManager::runProgram()
         cin >> temp;
 
         t1 = make_unique<SitoEratostenesa>(temp); // create object with argument temp
-        t1->generatePrimary();           // find primary numbers in area
+        t1->generatePrimary();                    // find primary numbers in area
         cout << "Liczby pierwsze w przedziale: " << endl;
         t1->printPrimary();
         break;
+    }
+    case 5:
+    {
+        system("clear");
+        cout << "Wyświetl wyniki!" << endl;
 
+        for (auto &t : threads)
+        {
+            if (t.joinable())
+            {
+                t.join();
+            }
+        }
+        threads.clear();
+
+        lock_guard<mutex> lock(mtx);
+
+        for (const auto &f : figResults)
+        {
+            cout << "Ciag Fibonacciego: ";
+            f->displayFib();
+            cout << endl;
+        }
+
+        // clear vectors is showed..
+        silniaResults.clear();
+        eratosResults.clear();
+        monteResults.clear();
+        figResults.clear();
+
+        break;
+    }
     default:
+
         cout << "Wybrano niepoprawna wartosc!" << endl;
         break;
-    };
+    }
 }
 
 int AlgorithmManager::getChoice()

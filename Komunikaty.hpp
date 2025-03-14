@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <thread>
+#include <mutex>
 #include <memory>
 #include <string>
 
@@ -32,6 +33,17 @@ public:
 
 private:
     int choice; // number of algorithm to run
+
+    vector<thread> threads;//threads
+    mutex mtx;//synchro threads(scores synchronisation)
+
+    //scores kept in vector(each from own thread)
+    vector<unique_ptr<Silnia>> silniaResults;//Silnia results
+    vector<unique_ptr<CiagFibonacciego>> figResults;//Fibonacci results
+    vector<unique_ptr<SitoEratostenesa>> eratosResults;//Eratostenes results
+    vector<unique_ptr<MonteCarlo>> monteResults;//Monte carlo results
+
+
 };
 
 #endif // KOMUNIKATY_HPP
