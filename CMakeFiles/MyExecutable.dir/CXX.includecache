@@ -12,13 +12,25 @@ iostream
 thread
 -
 
+/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.cpp
+Komunikaty.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.hpp
+
 /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.hpp
 iostream
 -
 thread
 -
+string
+-
 Silnia.hpp
 /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.hpp
+SitoEratostenesa.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.hpp
+MonteCarlo.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.hpp
+CiagFibonacciego.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CiagFibonacciego.hpp
 
 /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.hpp
 iostream
@@ -32,8 +44,14 @@ iostream
 thread
 -
 
+/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.cpp
+SitoEratostenesa.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.hpp
+
 /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.hpp
 iostream
+-
+vector
 -
 thread
 -
