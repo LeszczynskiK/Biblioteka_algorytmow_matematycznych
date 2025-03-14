@@ -30,16 +30,6 @@ void welcomeText()
     delayProgram();
 }
 
-void disableInput()
-{
-    system("stty -icanon"); //turn off possibility to type in terminal
-}
-
-void enableInput()
-{
-    system("stty icanon"); //turn on possibility to type in temrinal
-}
-
 AlgorithmManager::AlgorithmManager() // constructor...
 {
 }
@@ -56,6 +46,7 @@ void AlgorithmManager::runProgram()
     // if created in case, it woult only work in case
     Silnia *s1 = nullptr;           // silnia object
     SitoEratostenesa *t1 = nullptr; // Sito object
+    CiagFibonacciego *f1=nullptr;// Fibonacci object
 
     delayProgram();
     cout << "1. CiagFibonacciego - generowanie kolejnych liczb ciagu" << endl;
@@ -75,7 +66,25 @@ void AlgorithmManager::runProgram()
     switch (val) // choose option
     {
     case 1:
+        system("clear");
+        int numb;//amount of numbers to get
         cout << "Wybrano: ciag fibonacciego!!!" << endl;
+        delayProgram();
+
+        cout<<"Ile liczb z ciagu chcesz otrzymac: "<<endl;
+        delayProgram();
+        cout<<"n= ";
+        cin>>numb;
+
+        f1 = new CiagFibonacciego(numb);//create object
+        f1->generateFib();//generate numbers (n numbers)
+        delayProgram();
+
+        cout<<"Oto szukany ciag fibonacciego: "<<endl;
+        delayProgram();
+        f1->displayFib();
+
+
         break;
 
     case 2:
@@ -87,10 +96,12 @@ void AlgorithmManager::runProgram()
         system("clear");
         cout << "Wybrano:  silnia" << endl;
         delayProgram();
+
         cout << "Wprowadz n dla ktorego chcesz obliczyc n!" << endl;
         delayProgram();
         cout << "n= ";
         cin >> n;
+
         cout << "Dla n=" << n << " silnia wynosi: " << s1->countN(n) << endl;
         break;
 
@@ -157,7 +168,6 @@ void nextAlgorithm()
 
     while (temp1 != "TAK" && temp1 != "NIE") // if typped value is not TAK and NIE
     {
-        disableInput();
         system("clear");
         delayProgram();
         cout << "Wprowadzono zla wartosc..." << endl;
@@ -171,7 +181,6 @@ void nextAlgorithm()
 
         delayProgram();
         cout<<"Wybor: "<<endl;
-        enableInput();
         cin.ignore();//ignore new line char
         getline(cin, temp1);
 

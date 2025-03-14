@@ -18,8 +18,6 @@ void welcomeText();    // welcome text (begining of program working)
 void delayProgram();   // delay any code
 void longDelay(int i); // longer delay(delayprogram ran in loop)
 void nextAlgorithm();
-void disableInput();//turn off possibility to type in terminal
-void enableInput();//turn on possibility to type in terminal
 
 class AlgorithmManager
 {
