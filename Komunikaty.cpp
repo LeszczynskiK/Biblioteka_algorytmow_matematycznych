@@ -30,6 +30,16 @@ void welcomeText()
     delayProgram();
 }
 
+void disableInput()
+{
+    system("stty -icanon"); //turn off possibility to type in terminal
+}
+
+void enableInput()
+{
+    system("stty icanon"); //turn on possibility to type in temrinal
+}
+
 AlgorithmManager::AlgorithmManager() // constructor...
 {
 }
@@ -135,11 +145,20 @@ void nextAlgorithm()
     cout << endl;
     delayProgram();
 
-    cout << "Czy chcesz przejsc dalej: ";
+    cout << "Wybor opcji: ";
     cin.ignore();//ignore new line char
-    getline(cin, temp1);                     // read typed value
+    getline(cin, temp1); // read typed value
+
+    // convert the entire string to uppercase(nie -> NIE)
+    for (size_t i = 0; i < temp1.length(); i++)
+    {
+        temp1[i] = toupper(temp1[i]);
+    }
+
     while (temp1 != "TAK" && temp1 != "NIE") // if typped value is not TAK and NIE
     {
+        disableInput();
+        system("clear");
         delayProgram();
         cout << "Wprowadzono zla wartosc..." << endl;
 
@@ -151,10 +170,17 @@ void nextAlgorithm()
         cout << "NIE" << endl;
 
         delayProgram();
+        cout<<"Wybor: "<<endl;
+        enableInput();
         cin.ignore();//ignore new line char
         getline(cin, temp1);
-    }
 
+        // convert the entire string to uppercase(nie -> NIE)
+        for (size_t i = 0; i < temp1.length(); i++)
+        {
+            temp1[i] = toupper(temp1[i]);
+        }
+    }
     if (temp1 == "TAK")
     {
         cout << "Przechodzenie do nowej karty..." << endl;
@@ -166,13 +192,13 @@ void nextAlgorithm()
         system("clear");
         cout << "Koniec programu." << endl;
         delayProgram();
-    
-        for(int i=3;i>0;i--)//count 3,2,1 on screen and close program...
+
+        for (int i = 3; i > 0; i--) // count 3,2,1 on screen and close program...
         {
-            cout<<i<<endl;
+            cout << i << endl;
             delayProgram();
         }
 
-        exit(0);//finish program...
+        exit(0); // finish program...
     }
 }
