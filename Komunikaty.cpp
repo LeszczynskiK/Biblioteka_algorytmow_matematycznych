@@ -47,6 +47,7 @@ void AlgorithmManager::runProgram()
     Silnia *s1 = nullptr;           // silnia object
     SitoEratostenesa *t1 = nullptr; // Sito object
     CiagFibonacciego *f1=nullptr;// Fibonacci object
+    MonteCarlo *m1 = nullptr;
 
     delayProgram();
     cout << "1. CiagFibonacciego - generowanie kolejnych liczb ciagu" << endl;
@@ -88,7 +89,24 @@ void AlgorithmManager::runProgram()
         break;
 
     case 2:
+        int amount_of_trials;
+        system("clear");
         cout << "Wybrano:  monte carlo!!!" << endl;
+        delayProgram();
+
+        cout<<"Ile prob ma miec eksperyment: "<<endl;
+        delayProgram();
+
+        cout<<"Ilosc prob: ";
+        cin>>amount_of_trials;
+
+        delayProgram();
+        m1 = new MonteCarlo(amount_of_trials);//create object
+        m1->runSimulation();//call simulation method
+
+        cout<<"Po "<<amount_of_trials<<" probach, estymacja Pi = ";
+        m1->displayResult();//show estimated PI
+
         break;
 
     case 3:
