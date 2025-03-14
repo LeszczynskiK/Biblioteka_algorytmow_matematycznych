@@ -14,10 +14,16 @@ thread
 vector
 -
 
+/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.cpp
+Komunikaty.hpp
+/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.hpp
+
 /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.hpp
 iostream
 -
 thread
+-
+memory
 -
 string
 -

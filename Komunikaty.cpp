@@ -44,10 +44,10 @@ void AlgorithmManager::runProgram()
 
     // create class objects(empty so far, filled in funciton later) - becouse i want to have them not only in case but need them more locally...
     // if created in case, it woult only work in case
-    Silnia *s1 = nullptr;           // silnia object
-    SitoEratostenesa *t1 = nullptr; // Sito object
-    CiagFibonacciego *f1=nullptr;// Fibonacci object
-    MonteCarlo *m1 = nullptr;
+    unique_ptr<Silnia> s1;         //empty pointers so far
+    unique_ptr<SitoEratostenesa> t1; 
+    unique_ptr<CiagFibonacciego> f1; 
+    unique_ptr<MonteCarlo> m1;
 
     delayProgram();
     cout << "1. CiagFibonacciego - generowanie kolejnych liczb ciagu" << endl;
@@ -77,7 +77,7 @@ void AlgorithmManager::runProgram()
         cout<<"n= ";
         cin>>numb;
 
-        f1 = new CiagFibonacciego(numb);//create object
+        f1 = make_unique<CiagFibonacciego>(numb);//create object
         f1->generateFib();//generate numbers (n numbers)
         delayProgram();
 
@@ -101,7 +101,7 @@ void AlgorithmManager::runProgram()
         cin>>amount_of_trials;
 
         delayProgram();
-        m1 = new MonteCarlo(amount_of_trials);//create object
+        m1 = make_unique<MonteCarlo>(amount_of_trials);//create object
         m1->runSimulation();//call simulation method
 
         cout<<"Po "<<amount_of_trials<<" probach, estymacja Pi = ";
@@ -120,6 +120,7 @@ void AlgorithmManager::runProgram()
         cout << "n= ";
         cin >> n;
 
+        s1 = make_unique<Silnia>();//make object
         cout << "Dla n=" << n << " silnia wynosi: " << s1->countN(n) << endl;
         break;
 
@@ -134,7 +135,7 @@ void AlgorithmManager::runProgram()
         cout << "lim= ";
         cin >> temp;
 
-        t1 = new SitoEratostenesa(temp); // create object with argument temp
+        t1 = make_unique<SitoEratostenesa>(temp); // create object with argument temp
         t1->generatePrimary();           // find primary numbers in area
         cout << "Liczby pierwsze w przedziale: " << endl;
         t1->printPrimary();

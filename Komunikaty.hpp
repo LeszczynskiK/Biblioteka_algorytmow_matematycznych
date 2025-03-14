@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <thread>
+#include <memory>
 #include <string>
 
 #include "Silnia.hpp"
