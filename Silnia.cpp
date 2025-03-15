@@ -27,3 +27,8 @@ void Silnia::printCountN()//only return value that was counted before..
 {
     cout << scoreN;
 }
+
+int Silnia::returnRange()
+{
+    return range;
+}

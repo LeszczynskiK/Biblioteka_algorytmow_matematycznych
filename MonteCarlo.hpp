@@ -16,6 +16,7 @@ class MonteCarlo
         void runSimulation();//run monte carlo simulation
         void displayResult();//show result after simulation is done
         double singleTrial();//single trial method
+        int returnTrialLim();//return number of trials
 
     private:
         int num_trials;//number of trials

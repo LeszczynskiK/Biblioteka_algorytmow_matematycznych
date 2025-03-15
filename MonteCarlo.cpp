@@ -36,7 +36,7 @@ void MonteCarlo::runSimulation()
 
 void MonteCarlo::displayResult()//Pi value from simulation
 {
-    cout<<"Po "<<num_trials<<" probach, Pi jest rowne: "<<sim_result<<endl;
+    cout<<sim_result<<endl;
     
 }
 
@@ -63,6 +63,9 @@ double MonteCarlo::singleTrial()
 
     //check is point is inside circle
     return (distance <=1) ? 1.0 : 0.0;//if point inside circle, return 1, if not return 0
+}
 
-
+int MonteCarlo::returnTrialLim()
+{
+    return num_trials;
 }

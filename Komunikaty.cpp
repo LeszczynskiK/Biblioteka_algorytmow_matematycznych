@@ -2,9 +2,9 @@
 
 void delayProgram()
 {
-    for (int i = 0; i < 999; i++) // iterate loop
+    for (int i = 0; i < 9999; i++) // iterate loop
     {
-        for (int j = 0; j < 999; j++)
+        for (int j = 0; j < 9999; j++)
         {
             // it will iterate and make delay...
             // this function is made to make "stops" between something
@@ -22,12 +22,11 @@ void longDelay(int i) // longer delay...
 
 void welcomeText()
 {
+    system("clear");
     cout << "Witaj w programie skupiajacych w sobie wiele algorytmow matematycznych!" << endl;
-    delayProgram();
     cout << "Za chwile wyswietli ci sie lista mozliwych algorytmow do wykonania..." << endl;
-    delayProgram();
     cout << "Wybierz jeden z nich i postepuj zgodnie z instrukcja, ktora pojawi sie na ekranie!" << endl;
-    delayProgram();
+    longDelay(5);
 }
 
 AlgorithmManager::AlgorithmManager() // constructor...
@@ -56,26 +55,18 @@ void AlgorithmManager::runProgram()
     unique_ptr<CiagFibonacciego> f1;
     unique_ptr<MonteCarlo> m1;
 
-    delayProgram();
     system("clear");
     cout << "1. CiagFibonacciego - generowanie kolejnych liczb ciagu" << endl;
-    delayProgram();
     cout << "2. MonteCarlo - aproksymacja liczby Pi" << endl;
-    delayProgram();
     cout << "3. Silnia - obliczanie wartosci n!" << endl;
-    delayProgram();
     cout << "4. SitoEratostenesa - wypisywanie liczb pierwszych" << endl;
-    delayProgram();
     cout << "5. Wyswietl wszystkie wyniki..." << endl;
-    delayProgram();
     cout << "0. Zakoncz program!" << endl;
-    delayProgram();
 
+    cout<<endl;
     cout << "Wybierz wpisujac odpowiedni numer:" << endl;
-    delayProgram();
     cout << "Numer: ";
     cin >> val;
-    delayProgram();
 
     switch (val) // choose option
     {
@@ -95,10 +86,7 @@ void AlgorithmManager::runProgram()
         system("clear");
         int numb; // amount of numbers to get
         cout << "Wybrano: ciag fibonacciego!!!" << endl;
-        delayProgram();
-
         cout << "Ile liczb z ciagu chcesz otrzymac: " << endl;
-        delayProgram();
         cout << "n= ";
         cin >> numb;
 
@@ -117,14 +105,9 @@ void AlgorithmManager::runProgram()
         int amount_of_trials;
         system("clear");
         cout << "Wybrano:  monte carlo!!!" << endl;
-        delayProgram();
-
         cout << "Ile prob ma miec eksperyment: " << endl;
-        delayProgram();
-
         cout << "Ilosc prob: ";
         cin >> amount_of_trials;
-
 
         thread t1([this,amount_of_trials]()
                  {
@@ -142,10 +125,7 @@ void AlgorithmManager::runProgram()
         int n;
         system("clear");
         cout << "Wybrano:  silnia" << endl;
-        delayProgram();
-
         cout << "Wprowadz n dla ktorego chcesz obliczyc n!" << endl;
-        delayProgram();
         cout << "n= ";
         cin >> n;
 
@@ -166,10 +146,7 @@ void AlgorithmManager::runProgram()
         int temp; // put limit value here
         system("clear");
         cout << "Wybrano:  sito eratostenesa" << endl;
-        delayProgram();
-
         cout << "Wprowadz granice dla ktorej chcesz wyswietlic liczby pierwsze!" << endl;
-        delayProgram();
         cout << "lim= ";
         cin >> temp;
 
@@ -188,43 +165,50 @@ void AlgorithmManager::runProgram()
     {
         system("clear");
         cout << "Wyświetl wyniki!" << endl;
+        cout<<"----------------------------------------------"<<endl;
+        cout<<endl;
+        cout<<"Liczenie";
 
         for (auto &t : threads)
         {
+            cout<<".";
             if (t.joinable())
             {
                 t.join();
             }
         }
+        cout<<endl<<endl<<endl;//make bigger space to see results better
+
         threads.clear();
+        system("clear");
 
         lock_guard<mutex> lock(mtx);
 
         //made by iteration throw vector with counted scores...
         for (const auto &f : figResults)//show couner results for fibonacci
         {
-            cout << "Ciag Fibonacciego: ";
+            cout << "Ciag Fibonacciego(skladajacy sie z  "<<f->returnLimit()<<" liczb), to: ";
             f->displayFib();
-            cout << endl;
+            cout << endl<<endl;
         }
 
         for(const auto &s : silniaResults)//show couner results for silnia
         {
-            cout<<" Silnia: ";
+            cout<<"Silnia(z liczby "<<s->returnRange()<<"), to:";
             s->printCountN();
-            cout<<endl;
+            cout<<endl<<endl;
         }
 
         for(const auto &e : eratosResults)//show couner results for erastos
         {
-            cout<<" Sito eratostenesa: ";
+            cout<<" Sito eratostenesa(do max liczby "<<e->returnLimit()<<"), to:";
             e->printPrimary();
-            cout<<endl;
+            cout<<endl<<endl;
         }
 
         for(const auto &m : monteResults)//show couner results for monte
         {
-            cout<<"Monte carlo: ";
+            cout<<"Monte carlo(dla "<<m->returnTrialLim()<<" eksperymentow), to:";
             m->displayResult();
             cout<<endl;
         }
@@ -256,24 +240,18 @@ void AlgorithmManager::setChoice(int newChoice)
 
 void nextAlgorithm()
 {
-    longDelay(3);
     cout << "----------------------------------------------------------" << endl;
     cout << endl;
     cout << "Czy chcesz przejsc do nowej karty?" << endl;
-    delayProgram();
 
     string temp1;
     cout << "Wprowadz: " << endl;
-    delayProgram();
-
     cout << "TAK" << endl;
     cout << "NIE" << endl;
     cout << endl;
-    delayProgram();
 
     cout << "Wybor opcji: ";
-    cin.ignore();//ignore new line char
-    getline(cin, temp1); // read typed value
+    cin>>temp1;//get value(to decide is you wan to get to new card or no)
 
     // convert the entire string to uppercase(nie -> NIE)
     for (size_t i = 0; i < temp1.length(); i++)
@@ -284,20 +262,13 @@ void nextAlgorithm()
     while (temp1 != "TAK" && temp1 != "NIE") // if typped value is not TAK and NIE
     {
         system("clear");
-        delayProgram();
         cout << "Wprowadzono zla wartosc..." << endl;
-
-        delayProgram();
         cout << "Zdecyduj jeszcze raz: " << endl;
-
-        delayProgram();
         cout << "TAK" << endl;
         cout << "NIE" << endl;
 
-        delayProgram();
         cout<<"Wybor: "<<endl;
-        cin.ignore();//ignore new line char
-        getline(cin, temp1);
+        cin>>temp1;
 
         // convert the entire string to uppercase(nie -> NIE)
         for (size_t i = 0; i < temp1.length(); i++)
@@ -308,7 +279,6 @@ void nextAlgorithm()
     if (temp1 == "TAK")
     {
         cout << "Przechodzenie do nowej karty..." << endl;
-        longDelay(3);
         system("clear");
     }
     else

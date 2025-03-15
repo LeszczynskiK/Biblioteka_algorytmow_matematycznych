@@ -16,6 +16,7 @@ public:
 
     void generatePrimary(); // wind primary numbers in area
     void printPrimary();    // print found primary numbers in area
+    int returnLimit();//return limit max number in area
 
 private:
     int limit_value;          // max value in area

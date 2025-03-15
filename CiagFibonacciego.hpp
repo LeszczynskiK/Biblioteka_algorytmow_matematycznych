@@ -16,10 +16,11 @@ class CiagFibonacciego
     
         void generateFib();//generate fibonacci - limit numbers generated
         void displayFib();//display limit numbers which you generated in generateFib method
+        int returnLimit();
 
     private:    
         vector<long> fib_values;//fibbonaci values kept in vector (limit numbers generated will be stored here)
-        int limit;//amount of numbers to generate
+        int limit_val;//amount of numbers to generate
 
 };
 

@@ -35,3 +35,8 @@ void SitoEratostenesa::printPrimary() // display values fount in generatePrimary
         }
     }
 }
+
+int SitoEratostenesa::returnLimit()
+{
+    return limit_value;
+}

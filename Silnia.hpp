@@ -15,6 +15,7 @@ class Silnia {
         
         void countN();//count n! for n
         void printCountN();//print value
+        int returnRange();//return n number
     
     private:
     long long scoreN;
