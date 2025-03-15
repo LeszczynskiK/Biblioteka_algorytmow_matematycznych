@@ -60,7 +60,10 @@ void AlgorithmManager::runProgram()
     cout << "2. MonteCarlo - aproksymacja liczby Pi" << endl;
     cout << "3. Silnia - obliczanie wartosci n!" << endl;
     cout << "4. SitoEratostenesa - wypisywanie liczb pierwszych" << endl;
-    cout << "5. Wyswietl wszystkie wyniki..." << endl;
+    cout<<"5. Najwiekszy wspolny dzielnik - algorytm euklidesa"<<endl;
+    cout<<"6. Liczby doskonałe - generowanie ciągu "<<endl;
+    cout<<"7. Liczby pierwsze - generowanie ciągu"<<endl;
+    cout << "8. Wyswietl wszystkie wyniki..." << endl;
     cout << "0. Zakoncz program!" << endl;
 
     cout << endl;
@@ -167,6 +170,53 @@ void AlgorithmManager::runProgram()
         break;
     }
     case 5:
+    {
+        long long nr1,nr2;//number one and two to find its greatest common measure
+        system("clear");
+        cout<<"Wybrano: najwiekszy wspolny dzielnik"<<endl;
+        cout<<"Wprowadz liczby na ktorych chcesz operowac!"<<endl;
+        cout<<"Liczba1: ";
+        cin>>nr1;
+        cout<<endl;
+        cout<<"Liczba2: ";
+        cin>>nr2;
+        cout<<endl;
+
+        //thred here
+        
+        break;
+    }   
+    case 6:
+    {
+        long long lim11;//limit of prfect number to look for in area
+        system("clear");
+        cout<<"Wybrano: ciag liczb doskonalych"<<endl;
+        cout<<"Wprowadz granice ciagu ktory chcesz wypisac!"<<endl;
+        cout<<"Granica: ";
+        cin>>lim11;
+        cout<<endl;
+
+        //thread here
+
+        
+        break;
+    }  
+    case 7:
+    {
+        int first1;//limit of frime number to look for in area
+        system("clear");
+        cout<<"Wybrano: ciag liczb pierwszych"<<endl;
+        cout<<"Wprowadz granice ciagu ktory chcesz wypisac!"<<endl;
+        cout<<"Granica: ";
+        cin>>first1;
+        cout<<endl;
+
+        //thread here
+
+        
+        break;
+    }   
+    case 8:
     {
         system("clear");
         cout << "Wyświetl wyniki!" << endl;

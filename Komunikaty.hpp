@@ -13,6 +13,9 @@
 #include "SitoEratostenesa.hpp"
 #include "MonteCarlo.hpp"
 #include "CiagFibonacciego.hpp"
+#include "GreatestCommonMeasure.hpp"
+#include "PerfectNumber.hpp"
+#include "PrimeNumbers.hpp"
 
 using namespace std;
 
@@ -38,10 +41,13 @@ private:
     mutex mtx;              // synchro threads(scores synchronisation)
 
     // scores kept in vector(each from own thread)
-    vector<unique_ptr<Silnia>> silniaResults;           // Silnia results
-    vector<unique_ptr<CiagFibonacciego>> figResults;    // Fibonacci results
-    vector<unique_ptr<SitoEratostenesa>> eratosResults; // Eratostenes results
-    vector<unique_ptr<MonteCarlo>> monteResults;        // Monte carlo results
+    vector<unique_ptr<Silnia>> silniaResults;             // Silnia results
+    vector<unique_ptr<CiagFibonacciego>> figResults;      // Fibonacci results
+    vector<unique_ptr<SitoEratostenesa>> eratosResults;   // Eratostenes results
+    vector<unique_ptr<MonteCarlo>> monteResults;          // Monte carlo results
+    vector<unique_ptr<GreatestCommonMeasure>> GCMresults; // Greatest common measure results
+    vector<unique_ptr<PerfectNumber>> perfectResults;     // Perfect numbers results
+    vector<unique_ptr<PrimeNumbers>> primeResults;        // Prime numbers results
 };
 
 #endif // KOMUNIKATY_HPP
