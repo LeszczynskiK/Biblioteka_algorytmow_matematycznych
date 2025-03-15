@@ -31,15 +31,15 @@ void welcomeText()
 
 AlgorithmManager::AlgorithmManager() // constructor...
 {
-
 }
 
 AlgorithmManager::~AlgorithmManager() // destructor...
 {
-    for (auto& t : threads) {//reference to threads object(from vector)
-        if (t.joinable())//if there is any thread which is active(still joinable)
-        { 
-            t.join();//wait for this thread(so join him first, and then close program...)
+    for (auto &t : threads)
+    {                     // reference to threads object(from vector)
+        if (t.joinable()) // if there is any thread which is active(still joinable)
+        {
+            t.join(); // wait for this thread(so join him first, and then close program...)
         }
     }
 }
@@ -63,7 +63,7 @@ void AlgorithmManager::runProgram()
     cout << "5. Wyswietl wszystkie wyniki..." << endl;
     cout << "0. Zakoncz program!" << endl;
 
-    cout<<endl;
+    cout << endl;
     cout << "Wybierz wpisujac odpowiedni numer:" << endl;
     cout << "Numer: ";
     cin >> val;
@@ -109,17 +109,17 @@ void AlgorithmManager::runProgram()
         cout << "Ilosc prob: ";
         cin >> amount_of_trials;
 
-        thread t1([this,amount_of_trials]()
-                 {
-                    auto m1 = make_unique<MonteCarlo>(amount_of_trials);//create object with argument
-                    m1->runSimulation();//start method to ruj smulation
-                    lock_guard<mutex> lock(mtx);//save shared sources from multiacces 
-                    monteResults.push_back(move(m1));//push to scores vector
-                 });
-        threads.push_back(move(t1));//add this object to vector based on threads ... each counting is made in own thread!
+        thread t1([this, amount_of_trials]()
+                  {
+                      auto m1 = make_unique<MonteCarlo>(amount_of_trials); // create object with argument
+                      m1->runSimulation();                                 // start method to ruj smulation
+                      lock_guard<mutex> lock(mtx);                         // save shared sources from multiacces
+                      monteResults.push_back(move(m1));                    // push to scores vector
+                  });
+        threads.push_back(move(t1)); // add this object to vector based on threads ... each counting is made in own thread!
         break;
     }
-    //funcitonality below (all in case) is the same as commented in case 2...
+    // funcitonality below (all in case) is the same as commented in case 2...
     case 3:
     {
         int n;
@@ -135,8 +135,7 @@ void AlgorithmManager::runProgram()
            s1->countN();
            lock_guard<mutex> lock(mtx);
 
-           silniaResults.push_back(move(s1));
-         });
+           silniaResults.push_back(move(s1)); });
         threads.push_back(move(t2));
 
         break;
@@ -150,14 +149,13 @@ void AlgorithmManager::runProgram()
         cout << "lim= ";
         cin >> temp;
 
-        thread t3([this,temp]()
-        {
+        thread t3([this, temp]()
+                  {
            auto e1 = make_unique<SitoEratostenesa>(temp);
             e1->generatePrimary();
 
             lock_guard<mutex> lock(mtx);
-            eratosResults.push_back(move(e1));
-        });
+            eratosResults.push_back(move(e1)); });
         threads.push_back(move(t3));
         break;
     }
@@ -165,52 +163,57 @@ void AlgorithmManager::runProgram()
     {
         system("clear");
         cout << "Wyświetl wyniki!" << endl;
-        cout<<"----------------------------------------------"<<endl;
-        cout<<endl;
-        cout<<"Liczenie";
+        cout << "----------------------------------------------" << endl;
+        cout << endl;
+        cout << "Liczenie";
 
         for (auto &t : threads)
         {
-            cout<<".";
+            cout << ".";
             if (t.joinable())
             {
                 t.join();
             }
         }
-        cout<<endl<<endl<<endl;//make bigger space to see results better
+        cout << endl
+             << endl
+             << endl; // make bigger space to see results better
 
         threads.clear();
         system("clear");
 
         lock_guard<mutex> lock(mtx);
 
-        //made by iteration throw vector with counted scores...
-        for (const auto &f : figResults)//show couner results for fibonacci
+        // made by iteration throw vector with counted scores...
+        for (const auto &f : figResults) // show couner results for fibonacci
         {
-            cout << "Ciag Fibonacciego(skladajacy sie z  "<<f->returnLimit()<<" liczb), to: ";
+            cout << "Ciag Fibonacciego(skladajacy sie z  " << f->returnLimit() << " liczb), to: ";
             f->displayFib();
-            cout << endl<<endl;
+            cout << endl
+                 << endl;
         }
 
-        for(const auto &s : silniaResults)//show couner results for silnia
+        for (const auto &s : silniaResults) // show couner results for silnia
         {
-            cout<<"Silnia(z liczby "<<s->returnRange()<<"), to:";
+            cout << "Silnia(z liczby " << s->returnRange() << "), to:";
             s->printCountN();
-            cout<<endl<<endl;
+            cout << endl
+                 << endl;
         }
 
-        for(const auto &e : eratosResults)//show couner results for erastos
+        for (const auto &e : eratosResults) // show couner results for erastos
         {
-            cout<<" Sito eratostenesa(do max liczby "<<e->returnLimit()<<"), to:";
+            cout << " Sito eratostenesa(do max liczby " << e->returnLimit() << "), to:";
             e->printPrimary();
-            cout<<endl<<endl;
+            cout << endl
+                 << endl;
         }
 
-        for(const auto &m : monteResults)//show couner results for monte
+        for (const auto &m : monteResults) // show couner results for monte
         {
-            cout<<"Monte carlo(dla "<<m->returnTrialLim()<<" eksperymentow), to:";
+            cout << "Monte carlo(dla " << m->returnTrialLim() << " eksperymentow), to:";
             m->displayResult();
-            cout<<endl;
+            cout << endl;
         }
 
         // clear vectors is showed..
@@ -251,7 +254,7 @@ void nextAlgorithm()
     cout << endl;
 
     cout << "Wybor opcji: ";
-    cin>>temp1;//get value(to decide is you wan to get to new card or no)
+    cin >> temp1; // get value(to decide is you wan to get to new card or no)
 
     // convert the entire string to uppercase(nie -> NIE)
     for (size_t i = 0; i < temp1.length(); i++)
@@ -267,8 +270,8 @@ void nextAlgorithm()
         cout << "TAK" << endl;
         cout << "NIE" << endl;
 
-        cout<<"Wybor: "<<endl;
-        cin>>temp1;
+        cout << "Wybor: " << endl;
+        cin >> temp1;
 
         // convert the entire string to uppercase(nie -> NIE)
         for (size_t i = 0; i < temp1.length(); i++)

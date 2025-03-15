@@ -31,7 +31,7 @@ int CiagFibonacciego::returnLimit()
 void CiagFibonacciego::displayFib()
 {
     int iter_numb = 0;
-    for (long temp : fib_values) // iterate throw vector...
+    for (long long temp : fib_values) // iterate throw vector...
     {
         iter_numb++; // increate number of iterations
         if (iter_numb <= limit_val)

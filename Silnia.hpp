@@ -7,22 +7,21 @@
 #include <thread>
 using namespace std;
 
+class Silnia
+{
+public:
+    Silnia(long long n); // constructor
+    ~Silnia();           // destructor
 
-class Silnia {
-    public:
-    Silnia(int n);//constructor
-    ~Silnia();//destructor
-        
-        void countN();//count n! for n
-        void printCountN();//print value
-        int returnRange();//return n number
-    
-    private:
+    void countN();           // count n! for n
+    void printCountN();      // print value
+    long long returnRange(); // return n number
+
+private:
     long long scoreN;
-    long long recurentiveCountN(int n);//private funciton for recurentive counting
+    long long recurentiveCountN(long long n); // private funciton for recurentive counting
 
-    int range;
-        
-    };
+    long long range;
+};
 
 #endif // SILNIA_HPP

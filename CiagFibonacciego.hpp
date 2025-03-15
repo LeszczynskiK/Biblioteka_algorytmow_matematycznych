@@ -19,7 +19,7 @@ class CiagFibonacciego
         int returnLimit();
 
     private:    
-        vector<long> fib_values;//fibbonaci values kept in vector (limit numbers generated will be stored here)
+        vector<long long> fib_values;//fibbonaci values kept in vector (limit numbers generated will be stored here)
         int limit_val;//amount of numbers to generate
 
 };

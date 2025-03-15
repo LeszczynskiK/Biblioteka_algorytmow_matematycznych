@@ -1,21 +1,21 @@
 #include "Silnia.hpp"
 
-Silnia::Silnia(int n)//constructor
+Silnia::Silnia(long long n) // constructor
 {
-    range=n;
+    range = n;
 }
 
-Silnia::~Silnia()//destructor
+Silnia::~Silnia() // destructor
 {
-
 }
 
-void Silnia::countN()//use recurentive function to count
+void Silnia::countN() // use recurentive function to count
 {
     scoreN = recurentiveCountN(range);
 }
 
-long long Silnia::recurentiveCountN(int n) {//used for recurentive call
+long long Silnia::recurentiveCountN(long long n)
+{ // used for recurentive call
     if (n == 0 || n == 1)
     {
         return 1;
@@ -23,12 +23,12 @@ long long Silnia::recurentiveCountN(int n) {//used for recurentive call
     return n * recurentiveCountN(n - 1);
 }
 
-void Silnia::printCountN()//only return value that was counted before..
+void Silnia::printCountN() // only return value that was counted before..
 {
     cout << scoreN;
 }
 
-int Silnia::returnRange()
+long long Silnia::returnRange()
 {
     return range;
 }

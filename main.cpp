@@ -16,16 +16,16 @@ unique_ptr<AlgorithmManager> object1 = make_unique<AlgorithmManager>(); // smart
 int main()
 {
     cout << "--------------------------------------------------------------------------" << endl;
-    delayProgram();  // wait before showing welcome text...
-    welcomeText();   // display welcome text...
-    
+    delayProgram(); // wait before showing welcome text...
+    welcomeText();  // display welcome text...
+
     while (true)
-    { // infinite loop
+    {                    // infinite loop
         system("clear"); // clear cmd
 
         object1->runProgram();
-        
-        nextAlgorithm();//to continue program work?? 
+
+        nextAlgorithm(); // to continue program work??
     }
 
     return 0;
