@@ -8,6 +8,9 @@
 #include "Silnia.hpp"
 #include "SitoEratostenesa.hpp"
 #include "Komunikaty.hpp"
+#include "GreatestCommonMeasure.hpp"
+#include "PerfectNumber.hpp"
+#include "PrimeNumbers.hpp"
 
 using namespace std;
 

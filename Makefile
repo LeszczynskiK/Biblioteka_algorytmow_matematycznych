@@ -150,6 +150,33 @@ CiagFibonacciego.cpp.s:
 	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/CiagFibonacciego.cpp.s
 .PHONY : CiagFibonacciego.cpp.s
 
+GreatestCommonMeasure.o: GreatestCommonMeasure.cpp.o
+
+.PHONY : GreatestCommonMeasure.o
+
+# target to build an object file
+GreatestCommonMeasure.cpp.o:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o
+.PHONY : GreatestCommonMeasure.cpp.o
+
+GreatestCommonMeasure.i: GreatestCommonMeasure.cpp.i
+
+.PHONY : GreatestCommonMeasure.i
+
+# target to preprocess a source file
+GreatestCommonMeasure.cpp.i:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.i
+.PHONY : GreatestCommonMeasure.cpp.i
+
+GreatestCommonMeasure.s: GreatestCommonMeasure.cpp.s
+
+.PHONY : GreatestCommonMeasure.s
+
+# target to generate assembly for a file
+GreatestCommonMeasure.cpp.s:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.s
+.PHONY : GreatestCommonMeasure.cpp.s
+
 Komunikaty.o: Komunikaty.cpp.o
 
 .PHONY : Komunikaty.o
@@ -203,6 +230,60 @@ MonteCarlo.s: MonteCarlo.cpp.s
 MonteCarlo.cpp.s:
 	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/MonteCarlo.cpp.s
 .PHONY : MonteCarlo.cpp.s
+
+PerfectNumber.o: PerfectNumber.cpp.o
+
+.PHONY : PerfectNumber.o
+
+# target to build an object file
+PerfectNumber.cpp.o:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o
+.PHONY : PerfectNumber.cpp.o
+
+PerfectNumber.i: PerfectNumber.cpp.i
+
+.PHONY : PerfectNumber.i
+
+# target to preprocess a source file
+PerfectNumber.cpp.i:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.i
+.PHONY : PerfectNumber.cpp.i
+
+PerfectNumber.s: PerfectNumber.cpp.s
+
+.PHONY : PerfectNumber.s
+
+# target to generate assembly for a file
+PerfectNumber.cpp.s:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.s
+.PHONY : PerfectNumber.cpp.s
+
+PrimeNumbers.o: PrimeNumbers.cpp.o
+
+.PHONY : PrimeNumbers.o
+
+# target to build an object file
+PrimeNumbers.cpp.o:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o
+.PHONY : PrimeNumbers.cpp.o
+
+PrimeNumbers.i: PrimeNumbers.cpp.i
+
+.PHONY : PrimeNumbers.i
+
+# target to preprocess a source file
+PrimeNumbers.cpp.i:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.i
+.PHONY : PrimeNumbers.cpp.i
+
+PrimeNumbers.s: PrimeNumbers.cpp.s
+
+.PHONY : PrimeNumbers.s
+
+# target to generate assembly for a file
+PrimeNumbers.cpp.s:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.s
+.PHONY : PrimeNumbers.cpp.s
 
 Silnia.o: Silnia.cpp.o
 
@@ -297,12 +378,21 @@ help:
 	@echo "... CiagFibonacciego.o"
 	@echo "... CiagFibonacciego.i"
 	@echo "... CiagFibonacciego.s"
+	@echo "... GreatestCommonMeasure.o"
+	@echo "... GreatestCommonMeasure.i"
+	@echo "... GreatestCommonMeasure.s"
 	@echo "... Komunikaty.o"
 	@echo "... Komunikaty.i"
 	@echo "... Komunikaty.s"
 	@echo "... MonteCarlo.o"
 	@echo "... MonteCarlo.i"
 	@echo "... MonteCarlo.s"
+	@echo "... PerfectNumber.o"
+	@echo "... PerfectNumber.i"
+	@echo "... PerfectNumber.s"
+	@echo "... PrimeNumbers.o"
+	@echo "... PrimeNumbers.i"
+	@echo "... PrimeNumbers.s"
 	@echo "... Silnia.o"
 	@echo "... Silnia.i"
 	@echo "... Silnia.s"

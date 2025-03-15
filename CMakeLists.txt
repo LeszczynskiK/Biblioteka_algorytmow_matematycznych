@@ -15,6 +15,9 @@ set(SOURCES
     MonteCarlo.cpp  
     Silnia.cpp 
     SitoEratostenesa.cpp 
+    GreatestCommonMeasure.cpp
+    PerfectNumber.cpp
+    PrimeNumbers.cpp
 )
 
 # Heading files
@@ -24,6 +27,9 @@ set(HEADERS
     MonteCarlo.hpp
     Silnia.hpp
     SitoEratostenesa.hpp
+    GreatestCommonMeasure.hpp
+    PerfectNumber.hpp
+    PrimeNumbers.hpp
 )
 
 #Make executable file

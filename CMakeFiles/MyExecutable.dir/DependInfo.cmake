@@ -5,8 +5,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CiagFibonacciego.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/CiagFibonacciego.cpp.o"
+  "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/GreatestCommonMeasure.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o"
   "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o"
   "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/MonteCarlo.cpp.o"
+  "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o"
+  "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o"
   "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/Silnia.cpp.o"
   "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.o"
   "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/main.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/main.cpp.o"

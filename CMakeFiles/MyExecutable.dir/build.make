@@ -135,6 +135,45 @@ CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.cpp -o CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.s
 
+CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o: CMakeFiles/MyExecutable.dir/flags.make
+CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o: GreatestCommonMeasure.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o -c /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/GreatestCommonMeasure.cpp
+
+CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/GreatestCommonMeasure.cpp > CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.i
+
+CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/GreatestCommonMeasure.cpp -o CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.s
+
+CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o: CMakeFiles/MyExecutable.dir/flags.make
+CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o: PerfectNumber.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o -c /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.cpp
+
+CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.cpp > CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.i
+
+CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.cpp -o CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.s
+
+CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o: CMakeFiles/MyExecutable.dir/flags.make
+CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o: PrimeNumbers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o -c /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.cpp
+
+CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.cpp > CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.i
+
+CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.cpp -o CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.s
+
 # Object files for target MyExecutable
 MyExecutable_OBJECTS = \
 "CMakeFiles/MyExecutable.dir/main.cpp.o" \
@@ -142,7 +181,10 @@ MyExecutable_OBJECTS = \
 "CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o" \
 "CMakeFiles/MyExecutable.dir/MonteCarlo.cpp.o" \
 "CMakeFiles/MyExecutable.dir/Silnia.cpp.o" \
-"CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.o"
+"CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.o" \
+"CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o" \
+"CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o" \
+"CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o"
 
 # External object files for target MyExecutable
 MyExecutable_EXTERNAL_OBJECTS =
@@ -153,9 +195,12 @@ MyExecutable: CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o
 MyExecutable: CMakeFiles/MyExecutable.dir/MonteCarlo.cpp.o
 MyExecutable: CMakeFiles/MyExecutable.dir/Silnia.cpp.o
 MyExecutable: CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.o
+MyExecutable: CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o
+MyExecutable: CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o
+MyExecutable: CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o
 MyExecutable: CMakeFiles/MyExecutable.dir/build.make
 MyExecutable: CMakeFiles/MyExecutable.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable MyExecutable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable MyExecutable"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyExecutable.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

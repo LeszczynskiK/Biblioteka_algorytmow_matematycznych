@@ -12,6 +12,10 @@ Algorytmy:
 2. Silnia – obliczanie wartości n!.     
 3. Ciąg Fibonacciego – generowanie kolejnych liczb ciągu.   
 4. Metoda Monte Carlo – aproksymacja liczby pi. 
+5. Największy wspólny dzielnik - algorytm euklidesa
+6. Rozkład na czynniki pierwsze
+7. Liczby doskonałe
+
 
 Technologie:    
 C++     

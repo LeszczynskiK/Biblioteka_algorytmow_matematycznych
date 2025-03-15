@@ -4,6 +4,9 @@
 CMakeFiles/MyExecutable.dir/CiagFibonacciego.cpp.o
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CiagFibonacciego.cpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CiagFibonacciego.hpp
+CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o
+ /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/GreatestCommonMeasure.cpp
+ /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/GreatestCommonMeasure.hpp
 CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CiagFibonacciego.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.cpp
@@ -14,6 +17,12 @@ CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o
 CMakeFiles/MyExecutable.dir/MonteCarlo.cpp.o
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.cpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.hpp
+CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o
+ /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.cpp
+ /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.hpp
+CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o
+ /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.cpp
+ /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.hpp
 CMakeFiles/MyExecutable.dir/Silnia.cpp.o
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.cpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.hpp
@@ -22,8 +31,11 @@ CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.o
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.hpp
 CMakeFiles/MyExecutable.dir/main.cpp.o
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CiagFibonacciego.hpp
+ /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/GreatestCommonMeasure.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.hpp
+ /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.hpp
+ /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/main.cpp

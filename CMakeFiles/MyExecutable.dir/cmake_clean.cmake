@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MyExecutable.dir/CiagFibonacciego.cpp.o"
+  "CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o"
   "CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o"
   "CMakeFiles/MyExecutable.dir/MonteCarlo.cpp.o"
+  "CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o"
+  "CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o"
   "CMakeFiles/MyExecutable.dir/Silnia.cpp.o"
   "CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.o"
   "CMakeFiles/MyExecutable.dir/main.cpp.o"
