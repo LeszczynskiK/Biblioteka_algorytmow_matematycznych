@@ -50,19 +50,22 @@ void AlgorithmManager::runProgram()
 
     // create class objects(empty so far, filled in funciton later) - becouse i want to have them not only in case but need them more locally...
     // if created in case, it woult only work in case
-    unique_ptr<Silnia> s1; // empty pointers so far
+    unique_ptr<Silnia> s1; // empty  smart pointers so far
     unique_ptr<SitoEratostenesa> e1;
     unique_ptr<CiagFibonacciego> f1;
     unique_ptr<MonteCarlo> m1;
+    unique_ptr<GreatestCommonMeasure> g1;
+    unique_ptr<PerfectNumber> p1;
+    unique_ptr<PrimeNumbers> p2;
 
     system("clear");
     cout << "1. CiagFibonacciego - generowanie kolejnych liczb ciagu" << endl;
     cout << "2. MonteCarlo - aproksymacja liczby Pi" << endl;
     cout << "3. Silnia - obliczanie wartosci n!" << endl;
     cout << "4. SitoEratostenesa - wypisywanie liczb pierwszych" << endl;
-    cout<<"5. Najwiekszy wspolny dzielnik - algorytm euklidesa"<<endl;
-    cout<<"6. Liczby doskonałe - generowanie ciągu "<<endl;
-    cout<<"7. Liczby pierwsze - generowanie ciągu"<<endl;
+    cout << "5. Najwiekszy wspolny dzielnik - algorytm euklidesa" << endl;
+    cout << "6. Liczby doskonałe - generowanie ciągu " << endl;
+    cout << "7. Liczby pierwsze - generowanie ciągu" << endl;
     cout << "8. Wyswietl wszystkie wyniki..." << endl;
     cout << "0. Zakoncz program!" << endl;
 
@@ -80,6 +83,9 @@ void AlgorithmManager::runProgram()
         eratosResults.clear();
         monteResults.clear();
         figResults.clear();
+        GCMresults.clear();
+        primeResults.clear();
+        perfectResults.clear();
 
         exit(0);
         break;
@@ -131,11 +137,11 @@ void AlgorithmManager::runProgram()
         cout << "Wprowadz n dla ktorego chcesz obliczyc n!" << endl;
         cout << "n= ";
         cin >> n;
-        while(n > 20)
+        while (n > 20)
         {
             system("clear");
-            cout<<"Wprowadzana wartosc przekracza maksymalny zakres(20)..."<<endl;
-            cout<<"Wprowadz wartosc ponownie: ";
+            cout << "Wprowadzana wartosc przekracza maksymalny zakres(20)..." << endl;
+            cout << "Wprowadz wartosc ponownie: ";
             cin >> n;
         }
 
@@ -171,51 +177,67 @@ void AlgorithmManager::runProgram()
     }
     case 5:
     {
-        long long nr1,nr2;//number one and two to find its greatest common measure
+        long long nr1, nr2; // number one and two to find its greatest common measure
         system("clear");
-        cout<<"Wybrano: najwiekszy wspolny dzielnik"<<endl;
-        cout<<"Wprowadz liczby na ktorych chcesz operowac!"<<endl;
-        cout<<"Liczba1: ";
-        cin>>nr1;
-        cout<<endl;
-        cout<<"Liczba2: ";
-        cin>>nr2;
-        cout<<endl;
+        cout << "Wybrano: najwiekszy wspolny dzielnik" << endl;
+        cout << "Wprowadz liczby na ktorych chcesz operowac!" << endl;
+        cout << "Liczba1: ";
+        cin >> nr1;
+        cout << endl;
+        cout << "Liczba2: ";
+        cin >> nr2;
+        cout << endl;
 
-        //thred here
-        
+        thread t4([this, nr1, nr2]()
+                  {
+           auto g1 = make_unique<GreatestCommonMeasure>(nr1,nr2);
+            g1->runComparison();
+            lock_guard<mutex> lock(mtx);
+            GCMresults.push_back(move(g1)); });
+        threads.push_back(move(t4));
+
         break;
-    }   
+    }
     case 6:
     {
-        long long lim11;//limit of prfect number to look for in area
+        long long lim11; // limit of prfect number to look for in area
         system("clear");
-        cout<<"Wybrano: ciag liczb doskonalych"<<endl;
-        cout<<"Wprowadz granice ciagu ktory chcesz wypisac!"<<endl;
-        cout<<"Granica: ";
-        cin>>lim11;
-        cout<<endl;
+        cout << "Wybrano: ciag liczb doskonalych" << endl;
+        cout << "Wprowadz granice ciagu ktory chcesz wypisac!" << endl;
+        cout << "Granica: ";
+        cin >> lim11;
+        cout << endl;
 
-        //thread here
+        thread t5([this, lim11]()
+                  {
+            auto p1 = make_unique<PerfectNumber>(lim11);
+             p1->startSimu();
+             lock_guard<mutex> lock(mtx);
+            perfectResults.push_back(move(p1)); });
+        threads.push_back(move(t5));
 
-        
         break;
-    }  
+    }
     case 7:
     {
-        int first1;//limit of frime number to look for in area
+        int first1; // limit of frime number to look for in area
         system("clear");
-        cout<<"Wybrano: ciag liczb pierwszych"<<endl;
-        cout<<"Wprowadz granice ciagu ktory chcesz wypisac!"<<endl;
-        cout<<"Granica: ";
-        cin>>first1;
-        cout<<endl;
+        cout << "Wybrano: ciag liczb pierwszych" << endl;
+        cout << "Wprowadz granice ciagu ktory chcesz wypisac!" << endl;
+        cout << "Granica: ";
+        cin >> first1;
+        cout << endl;
 
-        //thread here
+                thread t6([this, first1]()
+                  {
+            auto p2 = make_unique<PrimeNumbers>(first1);
+             p2->startSimu();
+             lock_guard<mutex> lock(mtx);
+            primeResults.push_back(move(p2)); });
+        threads.push_back(move(t6));
 
-        
         break;
-    }   
+    }
     case 8:
     {
         system("clear");
@@ -273,11 +295,26 @@ void AlgorithmManager::runProgram()
             cout << endl;
         }
 
+        for (const auto &g : GCMresults) // show greatest common measure results
+        {
+        }
+
+        for (const auto &pp1 : primeResults) // show prime results
+        {
+        }
+
+        for (const auto &pp2 : perfectResults) // show eprfect results
+        {
+        }
+
         // clear vectors is showed..
         silniaResults.clear();
         eratosResults.clear();
         monteResults.clear();
         figResults.clear();
+        GCMresults.clear();
+        primeResults.clear();
+        perfectResults.clear();
 
         break;
     }

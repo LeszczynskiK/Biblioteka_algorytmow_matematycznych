@@ -8,9 +8,12 @@ CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o: GreatestCommonMeasure.c
 CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o: GreatestCommonMeasure.hpp
 
 CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o: CiagFibonacciego.hpp
+CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o: GreatestCommonMeasure.hpp
 CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o: Komunikaty.cpp
 CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o: Komunikaty.hpp
 CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o: MonteCarlo.hpp
+CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o: PerfectNumber.hpp
+CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o: PrimeNumbers.hpp
 CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o: Silnia.hpp
 CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o: SitoEratostenesa.hpp
 
