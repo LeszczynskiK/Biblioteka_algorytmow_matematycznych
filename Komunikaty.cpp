@@ -128,6 +128,13 @@ void AlgorithmManager::runProgram()
         cout << "Wprowadz n dla ktorego chcesz obliczyc n!" << endl;
         cout << "n= ";
         cin >> n;
+        while(n > 20)
+        {
+            system("clear");
+            cout<<"Wprowadzana wartosc przekracza maksymalny zakres(20)..."<<endl;
+            cout<<"Wprowadz wartosc ponownie: ";
+            cin >> n;
+        }
 
         thread t2([this, n]()
                   {
