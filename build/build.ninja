@@ -107,6 +107,7 @@ build CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.o: CXX_COMPILER__MyExecut
 
 build MyExecutable: CXX_EXECUTABLE_LINKER__MyExecutable CMakeFiles/MyExecutable.dir/main.cpp.o CMakeFiles/MyExecutable.dir/CiagFibonacciego.cpp.o CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o CMakeFiles/MyExecutable.dir/MonteCarlo.cpp.o CMakeFiles/MyExecutable.dir/Silnia.cpp.o CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.o
   FLAGS = -g
+  LINK_LIBRARIES = -lpthread
   OBJECT_DIR = CMakeFiles/MyExecutable.dir
   POST_BUILD = :
   PRE_LINK = :

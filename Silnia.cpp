@@ -1,8 +1,8 @@
 #include "Silnia.hpp"
 
-Silnia::Silnia()//constructor
+Silnia::Silnia(int n)//constructor
 {
-
+    range=n;
 }
 
 Silnia::~Silnia()//destructor
@@ -10,22 +10,20 @@ Silnia::~Silnia()//destructor
 
 }
 
-long long Silnia::countN(int n)
+void Silnia::countN()//use recurentive function to count
 {
-    if(n<0)
-    {
-        cout<<"Cant count n! for n<0!"<<endl;
-        return -1;
-    }
+    scoreN = recurentiveCountN(range);
+}
 
+long long Silnia::recurentiveCountN(int n) {//used for recurentive call
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    return n * recurentiveCountN(n - 1);
+}
 
-    if(n == 1 || n == 0)
-    {
-        return 1;//n! for n =0 or 1 is 1
-    }
-    else
-    {
-    return n*countN(n-1);//recurentive counting n!
-    }
-    return -1;//it will never happen... if function is not void, have to return sth
+long long Silnia::printCountN()//only return value that was counted before..
+{
+    return scoreN;
 }

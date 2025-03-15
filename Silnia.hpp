@@ -10,12 +10,17 @@ using namespace std;
 
 class Silnia {
     public:
-    Silnia();//constructor
+    Silnia(int n);//constructor
     ~Silnia();//destructor
         
-        long long countN(int n);//count n! for n
+        void countN();//count n! for n
+        long long printCountN();//return value
     
     private:
+    long long scoreN;
+    long long recurentiveCountN(int n);//private funciton for recurentive counting
+
+    int range;
         
     };
 

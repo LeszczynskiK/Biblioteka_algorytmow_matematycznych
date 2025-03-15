@@ -52,11 +52,12 @@ void AlgorithmManager::runProgram()
     // create class objects(empty so far, filled in funciton later) - becouse i want to have them not only in case but need them more locally...
     // if created in case, it woult only work in case
     unique_ptr<Silnia> s1; // empty pointers so far
-    unique_ptr<SitoEratostenesa> t1;
+    unique_ptr<SitoEratostenesa> e1;
     unique_ptr<CiagFibonacciego> f1;
     unique_ptr<MonteCarlo> m1;
 
     delayProgram();
+    system("clear");
     cout << "1. CiagFibonacciego - generowanie kolejnych liczb ciagu" << endl;
     delayProgram();
     cout << "2. MonteCarlo - aproksymacja liczby Pi" << endl;
@@ -124,13 +125,15 @@ void AlgorithmManager::runProgram()
         cout << "Ilosc prob: ";
         cin >> amount_of_trials;
 
-        delayProgram();
-        m1 = make_unique<MonteCarlo>(amount_of_trials); // create object
-        m1->runSimulation();                            // call simulation method
 
-        cout << "Po " << amount_of_trials << " probach, estymacja Pi = ";
-        m1->displayResult(); // show estimated PI
-
+        thread t1([this,amount_of_trials]()
+                 {
+                    auto m1 = make_unique<MonteCarlo>(amount_of_trials);
+                    m1->runSimulation();
+                    lock_guard<mutex> lock(mtx);
+                    monteResults.push_back(move(m1));
+                 });
+        threads.push_back(move(t1));
         break;
     }
     case 3:
@@ -145,8 +148,16 @@ void AlgorithmManager::runProgram()
         cout << "n= ";
         cin >> n;
 
-        s1 = make_unique<Silnia>(); // make object
-        cout << "Dla n=" << n << " silnia wynosi: " << s1->countN(n) << endl;
+        thread t2([this, n]()
+                  {
+           auto s1 = make_unique<Silnia>(n);
+           s1->countN();
+           lock_guard<mutex> lock(mtx);
+
+           silniaResults.push_back(move(s1));
+         });
+        threads.push_back(move(t2));
+
         break;
     }
     case 4:
@@ -161,10 +172,14 @@ void AlgorithmManager::runProgram()
         cout << "lim= ";
         cin >> temp;
 
-        t1 = make_unique<SitoEratostenesa>(temp); // create object with argument temp
-        t1->generatePrimary();                    // find primary numbers in area
-        cout << "Liczby pierwsze w przedziale: " << endl;
-        t1->printPrimary();
+        thread t3([this,temp]()
+        {
+           auto e1 = make_unique<SitoEratostenesa>(temp);
+            e1->generatePrimary();
+
+            lock_guard<mutex> lock(mtx);
+        });
+        threads.push_back(move(t3));
         break;
     }
     case 5:
@@ -183,11 +198,39 @@ void AlgorithmManager::runProgram()
 
         lock_guard<mutex> lock(mtx);
 
-        for (const auto &f : figResults)
+        silniaResults.clear();
+        eratosResults.clear();
+        monteResults.clear();
+        figResults.clear();
+
+
+        //made by iteration throw vector with counted scores...
+        for (const auto &f : figResults)//show couner results for fibonacci
         {
             cout << "Ciag Fibonacciego: ";
             f->displayFib();
             cout << endl;
+        }
+
+        for(const auto &s : silniaResults)//show couner results for silnia
+        {
+            cout<<" Silnia: ";
+            s->printCountN();
+            cout<<endl;
+        }
+
+        for(const auto &e : eratosResults)//show couner results for erastos
+        {
+            cout<<" Sito eratostenesa: ";
+            e->printPrimary();
+            cout<<endl;
+        }
+
+        for(const auto &m : monteResults)//show couner results for monte
+        {
+            cout<<"Monte carlo: ";
+            m->displayResult();
+            cout<<endl;
         }
 
         // clear vectors is showed..
@@ -220,7 +263,7 @@ void nextAlgorithm()
     longDelay(3);
     cout << "----------------------------------------------------------" << endl;
     cout << endl;
-
+    system("clear");
     cout << "Czy chcesz przejsc do nowej karty?" << endl;
     delayProgram();
 
