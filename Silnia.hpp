@@ -14,7 +14,7 @@ class Silnia {
     ~Silnia();//destructor
         
         void countN();//count n! for n
-        long long printCountN();//return value
+        void printCountN();//print value
     
     private:
     long long scoreN;

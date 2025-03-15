@@ -128,14 +128,15 @@ void AlgorithmManager::runProgram()
 
         thread t1([this,amount_of_trials]()
                  {
-                    auto m1 = make_unique<MonteCarlo>(amount_of_trials);
-                    m1->runSimulation();
-                    lock_guard<mutex> lock(mtx);
-                    monteResults.push_back(move(m1));
+                    auto m1 = make_unique<MonteCarlo>(amount_of_trials);//create object with argument
+                    m1->runSimulation();//start method to ruj smulation
+                    lock_guard<mutex> lock(mtx);//save shared sources from multiacces 
+                    monteResults.push_back(move(m1));//push to scores vector
                  });
-        threads.push_back(move(t1));
+        threads.push_back(move(t1));//add this object to vector based on threads ... each counting is made in own thread!
         break;
     }
+    //funcitonality below (all in case) is the same as commented in case 2...
     case 3:
     {
         int n;
@@ -178,6 +179,7 @@ void AlgorithmManager::runProgram()
             e1->generatePrimary();
 
             lock_guard<mutex> lock(mtx);
+            eratosResults.push_back(move(e1));
         });
         threads.push_back(move(t3));
         break;
@@ -197,12 +199,6 @@ void AlgorithmManager::runProgram()
         threads.clear();
 
         lock_guard<mutex> lock(mtx);
-
-        silniaResults.clear();
-        eratosResults.clear();
-        monteResults.clear();
-        figResults.clear();
-
 
         //made by iteration throw vector with counted scores...
         for (const auto &f : figResults)//show couner results for fibonacci
@@ -263,7 +259,6 @@ void nextAlgorithm()
     longDelay(3);
     cout << "----------------------------------------------------------" << endl;
     cout << endl;
-    system("clear");
     cout << "Czy chcesz przejsc do nowej karty?" << endl;
     delayProgram();
 

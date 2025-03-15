@@ -23,7 +23,7 @@ long long Silnia::recurentiveCountN(int n) {//used for recurentive call
     return n * recurentiveCountN(n - 1);
 }
 
-long long Silnia::printCountN()//only return value that was counted before..
+void Silnia::printCountN()//only return value that was counted before..
 {
-    return scoreN;
+    cout << scoreN;
 }
