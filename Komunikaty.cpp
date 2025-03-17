@@ -263,6 +263,9 @@ void AlgorithmManager::runProgram()
 
         lock_guard<mutex> lock(mtx);
 
+        cout<<"----------------------------------------------------------"<<endl;
+        cout<<endl;
+        
         // made by iteration throw vector with counted scores...
         for (const auto &f : figResults) // show couner results for fibonacci
         {
@@ -327,6 +330,12 @@ void AlgorithmManager::runProgram()
 
             cout<<endl;
         }
+
+
+        cout<<"----------------------------------------------------------"<<endl;
+        cout<<endl;
+        cout<<"Przejscie do nowej karty wyczysci wyniki... "<<endl;
+        cout<<endl;
 
         // clear vectors is showed..
         silniaResults.clear();
