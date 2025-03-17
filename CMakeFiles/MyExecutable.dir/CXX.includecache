@@ -68,10 +68,6 @@ thread
 random
 -
 
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.cpp
-PerfectNumber.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.hpp
-
 /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.hpp
 iostream
 -
@@ -85,10 +81,6 @@ vector
 -
 string
 -
-
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.cpp
-PrimeNumbers.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.hpp
 
 /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.hpp
 iostream
@@ -117,28 +109,4 @@ vector
 -
 thread
 -
-
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/main.cpp
-iostream
--
-thread
--
-memory
--
-CiagFibonacciego.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CiagFibonacciego.hpp
-MonteCarlo.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.hpp
-Silnia.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.hpp
-SitoEratostenesa.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.hpp
-Komunikaty.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.hpp
-GreatestCommonMeasure.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/GreatestCommonMeasure.hpp
-PerfectNumber.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.hpp
-PrimeNumbers.hpp
-/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.hpp
 
