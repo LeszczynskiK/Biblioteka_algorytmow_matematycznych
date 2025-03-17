@@ -41,13 +41,13 @@ private:
     mutex mtx;              // synchro threads(scores synchronisation)
 
     // scores kept in vector(each from own thread)
-    vector<unique_ptr<Silnia>> silniaResults;             // Silnia results
-    vector<unique_ptr<CiagFibonacciego>> figResults;      // Fibonacci results
-    vector<unique_ptr<SitoEratostenesa>> eratosResults;   // Eratostenes results
-    vector<unique_ptr<MonteCarlo>> monteResults;          // Monte carlo results
-    vector<unique_ptr<GreatestCommonMeasure>> GCMresults; // Greatest common measure results
-    vector<unique_ptr<PerfectNumber>> perfectResults;     // Perfect numbers results
-    vector<unique_ptr<PrimeFactorization>> factorsResults;//Factors of number 
+    vector<unique_ptr<Silnia>> silniaResults;              // Silnia results
+    vector<unique_ptr<CiagFibonacciego>> figResults;       // Fibonacci results
+    vector<unique_ptr<SitoEratostenesa>> eratosResults;    // Eratostenes results
+    vector<unique_ptr<MonteCarlo>> monteResults;           // Monte carlo results
+    vector<unique_ptr<GreatestCommonMeasure>> GCMresults;  // Greatest common measure results
+    vector<unique_ptr<PerfectNumber>> perfectResults;      // Perfect numbers results
+    vector<unique_ptr<PrimeFactorization>> factorsResults; // Factors of number
 };
 
 #endif // KOMUNIKATY_HPP

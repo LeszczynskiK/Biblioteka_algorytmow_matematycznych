@@ -16,7 +16,7 @@ class PrimeFactorization
 {
 public:
     PrimeFactorization(long long i); // constructor
-    ~PrimeFactorization();     // destructor;
+    ~PrimeFactorization();           // destructor;
 
     long long returnLimit();                 // return value of number to refactore
     void startSimu();                        // simulation of finding factors of number

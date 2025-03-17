@@ -19,7 +19,7 @@ public:
     ~PerfectNumber();     // destructor;
 
     long long returnLimit();                 // max number to possibli find  - retrun opion
-    bool isPerfect(long long n);//helper function to check if number is perfect
+    bool isPerfect(long long n);             // helper function to check if number is perfect
     void startSimu();                        // simulation of perfect numbers
     vector<long long> returnResultOfSimul(); // to return values which are perfect numer to vector
 

@@ -222,13 +222,13 @@ void AlgorithmManager::runProgram()
     {
         int first1; // numer which we are looking for factor to divide into
         system("clear");
-        cout << "Wybrano: rozklad na czynniki pierwsze "<< endl;
+        cout << "Wybrano: rozklad na czynniki pierwsze " << endl;
         cout << "Wprowadz liczbe, ktora chcesz podzielnic na czynniki pierwsze!" << endl;
         cout << "Liczba: ";
         cin >> first1;
         cout << endl;
 
-                thread t6([this, first1]()
+        thread t6([this, first1]()
                   {
             auto p2 = make_unique<PrimeFactorization>(first1);
              p2->startSimu();
@@ -263,9 +263,9 @@ void AlgorithmManager::runProgram()
 
         lock_guard<mutex> lock(mtx);
 
-        cout<<"----------------------------------------------------------"<<endl;
-        cout<<endl;
-        
+        cout << "----------------------------------------------------------" << endl;
+        cout << endl;
+
         // made by iteration throw vector with counted scores...
         for (const auto &f : figResults) // show couner results for fibonacci
         {
@@ -300,42 +300,41 @@ void AlgorithmManager::runProgram()
 
         for (const auto &g : GCMresults) // show greatest common measure results
         {
-            cout<<"Najwiekszy wspolny dzielnik dla: "<<g->getFirstNumber()<<" i "<<g->getSecondNumber()<<", to:";
-            cout<<g->showScore();
-            cout<<endl;
+            cout << "Najwiekszy wspolny dzielnik dla: " << g->getFirstNumber() << " i " << g->getSecondNumber() << ", to:";
+            cout << g->showScore();
+            cout << endl;
         }
 
         for (const auto &pp1 : factorsResults) // show factirs
         {
-            cout<<"Czynniki pierwsze z liczby: "<<pp1->returnLimit()<<", to:";
+            cout << "Czynniki pierwsze z liczby: " << pp1->returnLimit() << ", to:";
             vector<long long> prime = pp1->returnResultOfSimul();
 
-            for(long long p1 : prime)//iterate throw vector of scores and then print each single score..
+            for (long long p1 : prime) // iterate throw vector of scores and then print each single score..
             {
-                cout<<p1<<" ";
+                cout << p1 << " ";
             }
 
-            cout<<endl;
+            cout << endl;
         }
 
         for (const auto &pp2 : perfectResults) // show eprfect results
         {
-            cout<<"Liczby doskonale do liczby: "<<pp2->returnLimit()<<", to:";
+            cout << "Liczby doskonale do liczby: " << pp2->returnLimit() << ", to:";
             vector<long long> perfect = pp2->returnResultOfSimul();
 
-            for(long long p2 : perfect)//iterate throw vector of scores and then print each single score..
+            for (long long p2 : perfect) // iterate throw vector of scores and then print each single score..
             {
-                cout<<p2<<" ";
+                cout << p2 << " ";
             }
 
-            cout<<endl;
+            cout << endl;
         }
 
-
-        cout<<"----------------------------------------------------------"<<endl;
-        cout<<endl;
-        cout<<"Przejscie do nowej karty wyczysci wyniki... "<<endl;
-        cout<<endl;
+        cout << "----------------------------------------------------------" << endl;
+        cout << endl;
+        cout << "Przejscie do nowej karty wyczysci wyniki... " << endl;
+        cout << endl;
 
         // clear vectors is showed..
         silniaResults.clear();
