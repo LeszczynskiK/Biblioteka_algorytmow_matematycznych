@@ -161,18 +161,18 @@ CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.cpp -o CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.s
 
-CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o: CMakeFiles/MyExecutable.dir/flags.make
-CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o: PrimeNumbers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o -c /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.cpp
+CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.o: CMakeFiles/MyExecutable.dir/flags.make
+CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.o: PrimeFactorization.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.o -c /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeFactorization.cpp
 
-CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.cpp > CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.i
+CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeFactorization.cpp > CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.i
 
-CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.cpp -o CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.s
+CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeFactorization.cpp -o CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.s
 
 # Object files for target MyExecutable
 MyExecutable_OBJECTS = \
@@ -184,7 +184,7 @@ MyExecutable_OBJECTS = \
 "CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.o" \
 "CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o" \
 "CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o" \
-"CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o"
+"CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.o"
 
 # External object files for target MyExecutable
 MyExecutable_EXTERNAL_OBJECTS =
@@ -197,7 +197,7 @@ MyExecutable: CMakeFiles/MyExecutable.dir/Silnia.cpp.o
 MyExecutable: CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.o
 MyExecutable: CMakeFiles/MyExecutable.dir/GreatestCommonMeasure.cpp.o
 MyExecutable: CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o
-MyExecutable: CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o
+MyExecutable: CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.o
 MyExecutable: CMakeFiles/MyExecutable.dir/build.make
 MyExecutable: CMakeFiles/MyExecutable.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable MyExecutable"

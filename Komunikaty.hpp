@@ -15,7 +15,7 @@
 #include "CiagFibonacciego.hpp"
 #include "GreatestCommonMeasure.hpp"
 #include "PerfectNumber.hpp"
-#include "PrimeNumbers.hpp"
+#include "PrimeFactorization.hpp"
 
 using namespace std;
 
@@ -47,7 +47,7 @@ private:
     vector<unique_ptr<MonteCarlo>> monteResults;          // Monte carlo results
     vector<unique_ptr<GreatestCommonMeasure>> GCMresults; // Greatest common measure results
     vector<unique_ptr<PerfectNumber>> perfectResults;     // Perfect numbers results
-    vector<unique_ptr<PrimeNumbers>> primeResults;        // Prime numbers results
+    vector<unique_ptr<PrimeFactorization>> factorsResults;//Factors of number 
 };
 
 #endif // KOMUNIKATY_HPP

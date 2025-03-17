@@ -56,7 +56,7 @@ void AlgorithmManager::runProgram()
     unique_ptr<MonteCarlo> m1;
     unique_ptr<GreatestCommonMeasure> g1;
     unique_ptr<PerfectNumber> p1;
-    unique_ptr<PrimeNumbers> p2;
+    unique_ptr<PrimeFactorization> p2;
 
     system("clear");
     cout << "1. CiagFibonacciego - generowanie kolejnych liczb ciagu" << endl;
@@ -65,7 +65,7 @@ void AlgorithmManager::runProgram()
     cout << "4. SitoEratostenesa - wypisywanie liczb pierwszych" << endl;
     cout << "5. Najwiekszy wspolny dzielnik - algorytm euklidesa" << endl;
     cout << "6. Liczby doskonałe - generowanie ciągu " << endl;
-    cout << "7. Liczby pierwsze - generowanie ciągu" << endl;
+    cout << "7. Rozklad na czynniki pierwsze " << endl;
     cout << "8. Wyswietl wszystkie wyniki..." << endl;
     cout << "0. Zakoncz program!" << endl;
 
@@ -84,7 +84,7 @@ void AlgorithmManager::runProgram()
         monteResults.clear();
         figResults.clear();
         GCMresults.clear();
-        primeResults.clear();
+        factorsResults.clear();
         perfectResults.clear();
 
         exit(0);
@@ -220,20 +220,20 @@ void AlgorithmManager::runProgram()
     }
     case 7:
     {
-        int first1; // limit of frime number to look for in area
+        int first1; // numer which we are looking for factor to divide into
         system("clear");
-        cout << "Wybrano: ciag liczb pierwszych" << endl;
-        cout << "Wprowadz granice ciagu ktory chcesz wypisac!" << endl;
-        cout << "Granica: ";
+        cout << "Wybrano: rozklad na czynniki pierwsze "<< endl;
+        cout << "Wprowadz liczbe, ktora chcesz podzielnic na czynniki pierwsze!" << endl;
+        cout << "Liczba: ";
         cin >> first1;
         cout << endl;
 
                 thread t6([this, first1]()
                   {
-            auto p2 = make_unique<PrimeNumbers>(first1);
+            auto p2 = make_unique<PrimeFactorization>(first1);
              p2->startSimu();
              lock_guard<mutex> lock(mtx);
-            primeResults.push_back(move(p2)); });
+            factorsResults.push_back(move(p2)); });
         threads.push_back(move(t6));
 
         break;
@@ -302,9 +302,9 @@ void AlgorithmManager::runProgram()
             cout<<endl;
         }
 
-        for (const auto &pp1 : primeResults) // show prime results
+        for (const auto &pp1 : factorsResults) // show factirs
         {
-            cout<<"Liczby pierwsze do liczby: "<<pp1->returnLimit()<<", to:";
+            cout<<"Czynniki pierwsze z liczby: "<<pp1->returnLimit()<<", to:";
             vector<long long> prime = pp1->returnResultOfSimul();
 
             for(long long p1 : prime)//iterate throw vector of scores and then print each single score..
@@ -334,7 +334,7 @@ void AlgorithmManager::runProgram()
         monteResults.clear();
         figResults.clear();
         GCMresults.clear();
-        primeResults.clear();
+        factorsResults.clear();
         perfectResults.clear();
 
         break;

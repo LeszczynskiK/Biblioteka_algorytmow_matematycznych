@@ -17,7 +17,7 @@ set(SOURCES
     SitoEratostenesa.cpp 
     GreatestCommonMeasure.cpp
     PerfectNumber.cpp
-    PrimeNumbers.cpp
+    PrimeFactorization.cpp
 )
 
 # Heading files
@@ -29,7 +29,7 @@ set(HEADERS
     SitoEratostenesa.hpp
     GreatestCommonMeasure.hpp
     PerfectNumber.hpp
-    PrimeNumbers.hpp
+    PrimeFactorization.hpp
 )
 
 #Make executable file

@@ -258,32 +258,32 @@ PerfectNumber.cpp.s:
 	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.s
 .PHONY : PerfectNumber.cpp.s
 
-PrimeNumbers.o: PrimeNumbers.cpp.o
+PrimeFactorization.o: PrimeFactorization.cpp.o
 
-.PHONY : PrimeNumbers.o
+.PHONY : PrimeFactorization.o
 
 # target to build an object file
-PrimeNumbers.cpp.o:
-	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o
-.PHONY : PrimeNumbers.cpp.o
+PrimeFactorization.cpp.o:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.o
+.PHONY : PrimeFactorization.cpp.o
 
-PrimeNumbers.i: PrimeNumbers.cpp.i
+PrimeFactorization.i: PrimeFactorization.cpp.i
 
-.PHONY : PrimeNumbers.i
+.PHONY : PrimeFactorization.i
 
 # target to preprocess a source file
-PrimeNumbers.cpp.i:
-	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.i
-.PHONY : PrimeNumbers.cpp.i
+PrimeFactorization.cpp.i:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.i
+.PHONY : PrimeFactorization.cpp.i
 
-PrimeNumbers.s: PrimeNumbers.cpp.s
+PrimeFactorization.s: PrimeFactorization.cpp.s
 
-.PHONY : PrimeNumbers.s
+.PHONY : PrimeFactorization.s
 
 # target to generate assembly for a file
-PrimeNumbers.cpp.s:
-	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.s
-.PHONY : PrimeNumbers.cpp.s
+PrimeFactorization.cpp.s:
+	$(MAKE) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.s
+.PHONY : PrimeFactorization.cpp.s
 
 Silnia.o: Silnia.cpp.o
 
@@ -390,9 +390,9 @@ help:
 	@echo "... PerfectNumber.o"
 	@echo "... PerfectNumber.i"
 	@echo "... PerfectNumber.s"
-	@echo "... PrimeNumbers.o"
-	@echo "... PrimeNumbers.i"
-	@echo "... PrimeNumbers.s"
+	@echo "... PrimeFactorization.o"
+	@echo "... PrimeFactorization.i"
+	@echo "... PrimeFactorization.s"
 	@echo "... Silnia.o"
 	@echo "... Silnia.i"
 	@echo "... Silnia.s"

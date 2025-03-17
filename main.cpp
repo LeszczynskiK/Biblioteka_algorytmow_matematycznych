@@ -10,7 +10,7 @@
 #include "Komunikaty.hpp"
 #include "GreatestCommonMeasure.hpp"
 #include "PerfectNumber.hpp"
-#include "PrimeNumbers.hpp"
+#include "PrimeFactorization.hpp"
 
 using namespace std;
 

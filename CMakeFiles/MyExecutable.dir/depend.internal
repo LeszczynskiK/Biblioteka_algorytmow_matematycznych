@@ -14,7 +14,7 @@ CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.hpp
- /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.hpp
+ /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeFactorization.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.hpp
 CMakeFiles/MyExecutable.dir/MonteCarlo.cpp.o
@@ -23,9 +23,9 @@ CMakeFiles/MyExecutable.dir/MonteCarlo.cpp.o
 CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.cpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.hpp
-CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o
- /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.cpp
- /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.hpp
+CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.o
+ /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeFactorization.cpp
+ /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeFactorization.hpp
 CMakeFiles/MyExecutable.dir/Silnia.cpp.o
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.cpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.hpp
@@ -38,7 +38,7 @@ CMakeFiles/MyExecutable.dir/main.cpp.o
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.hpp
- /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.hpp
+ /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeFactorization.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.hpp
  /home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/main.cpp

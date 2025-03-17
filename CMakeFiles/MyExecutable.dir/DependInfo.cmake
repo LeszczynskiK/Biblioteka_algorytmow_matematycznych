@@ -9,7 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Komunikaty.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/Komunikaty.cpp.o"
   "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/MonteCarlo.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/MonteCarlo.cpp.o"
   "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PerfectNumber.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/PerfectNumber.cpp.o"
-  "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeNumbers.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/PrimeNumbers.cpp.o"
+  "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/PrimeFactorization.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/PrimeFactorization.cpp.o"
   "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/Silnia.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/Silnia.cpp.o"
   "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/SitoEratostenesa.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/SitoEratostenesa.cpp.o"
   "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/main.cpp" "/home/krzysiek89/Desktop/QT_aplikacje/Algorytmy_matematyczne/CMakeFiles/MyExecutable.dir/main.cpp.o"
