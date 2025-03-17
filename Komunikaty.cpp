@@ -297,14 +297,35 @@ void AlgorithmManager::runProgram()
 
         for (const auto &g : GCMresults) // show greatest common measure results
         {
+            cout<<"Najwiekszy wspolny dzielnik dla: "<<g->getFirstNumber()<<" i "<<g->getSecondNumber()<<", to:";
+            cout<<g->showScore();
+            cout<<endl;
         }
 
         for (const auto &pp1 : primeResults) // show prime results
         {
+            cout<<"Liczby pierwsze do liczby: "<<pp1->returnLimit()<<", to:";
+            vector<long long> prime = pp1->returnResultOfSimul();
+
+            for(long long p1 : prime)//iterate throw vector of scores and then print each single score..
+            {
+                cout<<p1<<" ";
+            }
+
+            cout<<endl;
         }
 
         for (const auto &pp2 : perfectResults) // show eprfect results
         {
+            cout<<"Liczby doskonale do liczby: "<<pp2->returnLimit()<<", to:";
+            vector<long long> perfect = pp2->returnResultOfSimul();
+
+            for(long long p2 : perfect)//iterate throw vector of scores and then print each single score..
+            {
+                cout<<p2<<" ";
+            }
+
+            cout<<endl;
         }
 
         // clear vectors is showed..

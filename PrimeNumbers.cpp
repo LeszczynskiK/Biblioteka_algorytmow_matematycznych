@@ -3,6 +3,7 @@
 PrimeNumbers::PrimeNumbers(int i)
 {
 
+    limit_value=i;
 } // constructor
 
 PrimeNumbers::~PrimeNumbers()

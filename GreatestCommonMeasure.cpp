@@ -1,6 +1,6 @@
 #include "GreatestCommonMeasure.hpp"
 
-GreatestCommonMeasure::GreatestCommonMeasure(long long o1, long long o2) : first_number(o2), second_number(o2), GCMscore(0)
+GreatestCommonMeasure::GreatestCommonMeasure(long long o1, long long o2) : first_number(o1), second_number(o2), GCMscore(0)
 {
 
 } // constructor
